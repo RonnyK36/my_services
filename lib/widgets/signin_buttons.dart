@@ -8,7 +8,7 @@ Container signInButton(bool isSocial, String image, VoidCallback onPressed,
       style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all<Color>(color),
           shape: MaterialStateProperty.all(
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)))),
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)))),
       onPressed: onPressed,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),

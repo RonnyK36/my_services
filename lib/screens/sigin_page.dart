@@ -59,15 +59,16 @@ class SignInPage extends StatelessWidget {
               () {},
               'Sign in with email',
               Colors.white,
-              Colors.teal,
+              Colors.blue,
             ),
             SizedBox(height: 20),
             Text(
               'or',
               style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                  color: Theme.of(context).primaryColor),
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+                color: Theme.of(context).primaryColor,
+              ),
               textAlign: TextAlign.center,
             ),
             Divider(
