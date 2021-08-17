@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-Container signInButton(
-    VoidCallback onPressed, String label, Color textColor, Color color) {
+Container signInButton(bool isSocial, String image, VoidCallback onPressed,
+    String label, Color textColor, Color color) {
   return Container(
     height: 50,
     child: ElevatedButton(
@@ -10,12 +10,22 @@ Container signInButton(
           shape: MaterialStateProperty.all(
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)))),
       onPressed: onPressed,
-      child: Text(
-        label,
-        style: TextStyle(
-          // fontWeight: FontWeight.bold,
-          fontSize: 17,
-          color: textColor,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Row(
+          children: [
+            Container(
+                child: isSocial ? Image.asset(image) : SizedBox(width: 30)),
+            SizedBox(width: 20),
+            Text(
+              label,
+              style: TextStyle(
+                // fontWeight: FontWeight.bold,
+                fontSize: 17,
+                color: textColor,
+              ),
+            ),
+          ],
         ),
       ),
     ),

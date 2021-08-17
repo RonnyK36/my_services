@@ -27,15 +27,17 @@ class SignInPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text(
-              'Sign in',
+              'Create an Account',
               style: TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
               ),
               textAlign: TextAlign.center,
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 50),
             signInButton(
+              true,
+              'images/google-logo.png',
               () {},
               'Sign in with google',
               Colors.black,
@@ -43,6 +45,8 @@ class SignInPage extends StatelessWidget {
             ),
             SizedBox(height: 20),
             signInButton(
+              true,
+              'images/facebook-logo.png',
               () {},
               'Sign in with facebook',
               Colors.white,
@@ -50,6 +54,8 @@ class SignInPage extends StatelessWidget {
             ),
             SizedBox(height: 20),
             signInButton(
+              false,
+              '',
               () {},
               'Sign in with email',
               Colors.white,
@@ -72,6 +78,8 @@ class SignInPage extends StatelessWidget {
                 color: Colors.indigo),
             SizedBox(height: 20),
             signInButton(
+              false,
+              '',
               () {},
               'Anonymous signin',
               Colors.white,
