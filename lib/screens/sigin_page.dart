@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:my_services/widgets/signin_buttons.dart';
 
 class SignInPage extends StatelessWidget {
-  const SignInPage({Key? key}) : super(key: key);
+  final VoidCallback signInAnon;
 
+  SignInPage({required this.signInAnon});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -81,7 +82,7 @@ class SignInPage extends StatelessWidget {
             signInButton(
               false,
               '',
-              () {},
+              signInAnon,
               'Anonymous signin',
               Colors.white,
               Colors.blueGrey,

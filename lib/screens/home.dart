@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  final VoidCallback signOut;
+  HomePage({required this.signOut});
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -14,6 +15,12 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text('Home Services'),
         centerTitle: true,
+        actions: [
+          ElevatedButton.icon(
+              onPressed: widget.signOut,
+              icon: Icon(Icons.logout),
+              label: Text('Logout')),
+        ],
       ),
       body: Center(
         child: Container(
