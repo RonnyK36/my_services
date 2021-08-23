@@ -1,11 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_services/services/auth.dart';
 import 'package:my_services/widgets/signin_buttons.dart';
 
 class SignInPage extends StatelessWidget {
   final VoidCallback signInAnon;
+  final AuthBase auth;
 
-  SignInPage({required this.signInAnon});
+  SignInPage({required this.signInAnon, required this.auth});
   @override
   Widget build(BuildContext context) {
     return Scaffold(

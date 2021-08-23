@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:my_services/screens/authenticate.dart';
+import 'package:my_services/services/auth.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,7 +19,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.indigo,
       ),
-      home: Authenticate(),
+      home: Authenticate(
+        auth: Auth(),
+      ),
     );
   }
 }

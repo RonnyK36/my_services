@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:my_services/services/auth.dart';
 
 class HomePage extends StatefulWidget {
   final VoidCallback signOut;
-  HomePage({required this.signOut});
+  final AuthBase auth;
+  HomePage({required this.signOut, required this.auth});
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -13,7 +15,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Services'),
+        title: Text('Jobs'),
         centerTitle: true,
         actions: [
           ElevatedButton.icon(
