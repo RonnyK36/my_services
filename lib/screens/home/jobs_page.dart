@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:my_services/services/auth.dart';
 
-class HomePage extends StatefulWidget {
+class JobsPage extends StatefulWidget {
   final VoidCallback signOut;
-  final AuthBase auth;
-  HomePage({required this.signOut, required this.auth});
+  // final AuthBase auth;
+  JobsPage({required this.signOut});
 
   @override
-  _HomePageState createState() => _HomePageState();
+  _JobsPageState createState() => _JobsPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _JobsPageState extends State<JobsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,6 +43,8 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
+      floatingActionButton:
+          FloatingActionButton(onPressed: () {}, child: Icon(Icons.add)),
     );
   }
 }

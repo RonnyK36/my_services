@@ -2,12 +2,11 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:my_services/screens/home/jobs_page.dart';
 import 'package:my_services/screens/sigin_page.dart';
-import 'package:my_services/services/auth.dart';
 
 class Authenticate extends StatefulWidget {
-  Authenticate({required this.auth});
+  // Authenticate({required this.auth});
 
-  final AuthBase auth;
+  // final AuthBase auth;
   @override
   _AuthenticateState createState() => _AuthenticateState();
 }
@@ -26,7 +25,7 @@ class _AuthenticateState extends State<Authenticate> {
     FirebaseAuth.instance.currentUser;
   }
 
-  late final AuthBase auth;
+  // late final AuthBase auth;
 
   Future<void> signinAnon() async {
     try {
@@ -60,13 +59,13 @@ class _AuthenticateState extends State<Authenticate> {
   @override
   Widget build(BuildContext context) {
     return isAuth
-        ? HomePage(
+        ? JobsPage(
             signOut: signOut,
-            auth: Auth(),
+            // auth: Auth(),
           )
         : SignInPage(
             signInAnon: signinAnon,
-            auth: widget.auth,
+            // auth: widget.auth,
           );
   }
 }
